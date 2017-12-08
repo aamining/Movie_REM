@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Comment({ children }) {
+export default function Comment({ body }) {
   return (
-    <span>{children}</span>
+    <span>{ body }</span>
   )
 }

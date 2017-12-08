@@ -4,6 +4,8 @@ to be able to communicate between from end and back end local host7000 (express)
 
 “proxy”: “http://localhost:7000”
 
+note: both front and back server should be running
+
 
 componentDitMount() {
 fetch (‘/movie’)

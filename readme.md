@@ -19,27 +19,26 @@ note: for this code we have to be out of directory
 3- in node command:
 person=Person.create({firstName:'John', lastName:'Rambo'})
 
-it will create a promise like :
+if person not available make a new one OR if it is available switch to.
 
-Promise {
-  <pending>,
-  domain:
-   Domain {
-     domain: null,
-     _events: { error: [Function: debugDomainError] },
-     _eventsCount: 1,
-     _maxListeners: undefined,
-     members: [] } }
 
-4- to see
-in mongo command
-db.person.find({})
+# som mongoDB command
 
-5- collections are important part of this exercise
-to be completed……
+in terminal:
 
-6- Robo 3T  is a visual MongoDB database (very useful)
+```
+mongo (will start mongo server)
 
-https://robomongo.org/
+show dbs (show available databases)
+
+use <database name> (switch to database)
+
+db.< database name> .find() ( will show entire databse)
+
+show collections < show collections entire may availbale entir database.
+
+db.dropDatabase() (drop database note: need to be on database which need to drop)
+
+```
 
 -------

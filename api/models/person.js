@@ -5,7 +5,8 @@ const mongoose = require('./base');
 const PersonSchema = mongoose.Schema({
   firstName: String,
   lastName: String
-}, { collection: "person" });
+});
+//{ collection: "person" });
 
 const Person = mongoose.model('Person', PersonSchema);
 
