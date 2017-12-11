@@ -42,3 +42,6 @@ db.dropDatabase() (drop database note: need to be on database which need to drop
 ```
 
 -------
+# passport:
+
+yarn add passport passport-local passport-local-mongoose

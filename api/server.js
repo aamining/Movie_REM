@@ -1,8 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const authMiddleware = require('./middleware/auth');
 // Create the server
 const server = express();
+server.use(require('cookie-parser')());
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded());
+server.use(require('express-session')(
+  { secret: 'secret', resave: false, saveUninitialized: false}
+));
+
+server.use(authMiddleware.initialize);
+//yarn add server session
 
 // Movies router/controller
 const moviesRouter = require('./routes/movies');
@@ -10,7 +19,9 @@ const moviesRouter = require('./routes/movies');
 server.use(bodyParser.urlencoded({ extended:true }))
 
 server.use(bodyParser.json());
+
 server.use('/movies', moviesRouter);
+server.use('/auth', require('./routes/auth'));
 
 server.get('/', (req, res) => {
   res.json({
