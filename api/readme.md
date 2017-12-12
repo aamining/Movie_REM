@@ -30,3 +30,6 @@ Movie.findById(‘… ‘).
 	.populate(‘cast.character’)
 	.populate(‘crew.person’)
 	.then (m=> movie=m)
+
+yarn add server session
+yarn add jsonwebtoken passport-jwt
